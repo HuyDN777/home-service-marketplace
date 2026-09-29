@@ -1,0 +1,1 @@
+<nav class="pagination" aria-label="Phân trang"><% if (page > 1) { %><a href="?page=<%= page - 1 %>&pageSize=<%= pageSize %>">Trước</a><% } %><span>Trang <%= page %> / <%= Math.max(1, totalPages) %></span><% if (page < totalPages) { %><a href="?page=<%= page + 1 %>&pageSize=<%= pageSize %>">Sau</a><% } %></nav>

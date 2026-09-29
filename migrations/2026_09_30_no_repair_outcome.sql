@@ -1,0 +1,3 @@
+-- Run after 2026_09_29_repair_catalog.sql.
+ALTER TABLE service_quote
+    MODIFY COLUMN status ENUM('PENDING', 'ACCEPTED', 'REJECTED', 'NOT_REQUIRED') NOT NULL DEFAULT 'PENDING';

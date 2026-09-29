@@ -1,0 +1,6 @@
+.earning-stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.earning-stats .stat:first-child { border-top: 3px solid var(--brand); }
+.earning-stats strong { font-size: 21px; overflow-wrap: anywhere; }
+.job-meta .earning { color: var(--brand); font-weight: 750; }
+@media (max-width: 900px) { .earning-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 390px) { .earning-stats { grid-template-columns: 1fr; } }

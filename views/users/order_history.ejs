@@ -1,0 +1,35 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Đơn của tôi - Dọn Nhà Vui</title><link rel="stylesheet" href="/css/user/customer.css"><link rel="stylesheet" href="/css/user/order-history.css"></head><body><%- include('../layouts/header') %>
+<main class="page-main"><div class="shell"><div class="page-header"><span class="eyebrow">TÀI KHOẢN / ĐƠN HÀNG</span><h1 class="page-title">Đơn của tôi</h1><p class="page-subtitle">Theo dõi lịch hẹn và xác nhận khi công việc hoàn tất.</p></div><div id="pageNotice" role="status" aria-live="polite"></div><div id="debtNotice"></div><div class="filters" id="statusFilters"><button class="chip is-active" data-status="all">Tất cả</button><button class="chip" data-status="upcoming">Sắp tới</button><button class="chip" data-status="done">Đã xong</button></div><div id="ordersList" class="order-list"><p class="empty-state">Đang tải đơn hàng...</p></div><div id="orderPagination" class="pagination"></div></div></main>
+<div class="dialog-backdrop" id="cancelDialog" hidden>
+  <section class="dialog-panel" role="dialog" aria-modal="true" aria-labelledby="cancelDialogTitle">
+    <div class="dialog-head">
+      <div><span class="eyebrow">HỦY LỊCH HẸN</span><h2 id="cancelDialogTitle">Xác nhận hủy đơn</h2></div>
+      <button class="dialog-close" type="button" data-dialog-close aria-label="Đóng">&times;</button>
+    </div>
+    <div class="cancel-order-summary"><strong id="cancelOrderName">Đơn hàng</strong><span id="cancelOrderTime"></span></div>
+    <div class="cancel-policy" id="cancelPolicy"></div>
+    <form id="cancelOrderForm">
+      <label class="form-field" for="cancelReason">Lý do hủy <span class="optional">Không bắt buộc</span>
+        <textarea id="cancelReason" name="reason" maxlength="255" placeholder="Ví dụ: Tôi muốn đổi sang khung giờ khác"></textarea>
+      </label>
+      <div class="dialog-actions">
+        <button class="button button-outline" type="button" data-dialog-close>Quay lại</button>
+        <button class="button button-danger" id="cancelSubmit" type="submit">Xác nhận hủy</button>
+      </div>
+    </form>
+  </section>
+</div>
+<div class="dialog-backdrop" id="actionDialog" hidden>
+  <section class="dialog-panel" role="dialog" aria-modal="true" aria-labelledby="actionDialogTitle">
+    <div class="dialog-head">
+      <div><span class="eyebrow" id="actionDialogEyebrow">XÁC NHẬN</span><h2 id="actionDialogTitle">Xác nhận thao tác</h2></div>
+      <button class="dialog-close" type="button" data-action-dialog-close aria-label="Đóng">&times;</button>
+    </div>
+    <p id="actionDialogMessage" class="dialog-message"></p>
+    <div class="dialog-actions">
+      <button class="button button-outline" type="button" data-action-dialog-close>Quay lại</button>
+      <button class="button" id="actionDialogSubmit" type="button">Xác nhận</button>
+    </div>
+  </section>
+</div>
+<%- include('../layouts/footer') %><script src="/js/realtime.js" defer></script><script src="/js/user/history.js" defer></script></body></html>

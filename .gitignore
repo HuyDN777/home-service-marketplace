@@ -1,0 +1,4 @@
+node_modules/
+.env
+docs/BUSINESS_RULES.md
+docs/DATABASE_GUIDE.md

@@ -1,0 +1,6 @@
+.avatar-editor{display:flex;align-items:center;gap:20px;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.avatar-editor img{width:96px;height:96px;flex:none;border-radius:50%;object-fit:cover;border:2px solid var(--line);background:#fff}
+.avatar-editor .hint{margin:8px 0 0}
+.password-section{border-top:1px solid var(--line);margin-top:34px;padding-top:28px}
+.password-section h2{font-size:19px}
+@media(max-width:390px){.avatar-editor{gap:12px}.avatar-editor img{width:72px;height:72px}}

@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/home" aria-label="Dọn Nhà Vui, về trang chủ"><span class="brand-mark">✦</span><span>Dọn Nhà <b>Vui</b></span></a>
+    <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+      <a href="/home" data-nav="home">Trang chủ</a>
+      <a href="/services" data-nav="services">Dịch vụ</a>
+      <a href="/order-history" data-nav="order-history">Đơn của tôi</a>
+      <a href="/home#contact">Liên hệ</a>
+    </nav>
+    <div class="account-nav" id="loginRegisterNav"><a class="quiet-link" href="/login">Đăng nhập</a><a class="button button-sm" href="/register">Đăng ký</a></div>
+    <div class="account-nav" id="userGreetingNav" hidden><a class="account-link" href="/profile"><img id="userAvatar" class="avatar" src="/images/user/logo.png" alt=""><span id="greetingText">Tài khoản</span></a><form action="/logout" method="post"><button class="icon-button" type="submit" title="Đăng xuất" aria-label="Đăng xuất"><span class="icon-fallback">⇥</span><i data-lucide="log-out"></i></button></form></div>
+    <button class="menu-button icon-button" id="menuButton" type="button" aria-label="Mở menu" aria-expanded="false"><span class="icon-fallback">☰</span><i data-lucide="menu"></i></button>
+  </div>
+</header>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+<script src="/js/user/nav.js" defer></script>
+<style>.has-lucide .icon-fallback{display:none}.icon-fallback{font-size:20px;line-height:1}.site-header .icon-button i[data-lucide]{display:none}</style>
